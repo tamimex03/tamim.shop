@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  
+  --color-brand-red: #D32F2F;
+  --color-brand-white: #FFFFFF;
+  --color-brand-black: #1A1A1A;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-brand-white);
+  color: var(--color-brand-black);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* RGB animation */
+@keyframes rgbText {
+  0% { color: #ff0000; }
+  20% { color: #ffff00; }
+  40% { color: #00ff00; }
+  60% { color: #00ffff; }
+  80% { color: #0000ff; }
+  100% { color: #ff00ff; }
+}
+
+.rgb-text-anim {
+  animation: rgbText 15s linear infinite;
+  display: inline-block;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1; 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8; 
+}
+
+/* Base styles for Markdown if needed */
+.markdown-body {
+  line-height: 1.6;
+}
+.markdown-body h1, .markdown-body h2, .markdown-body h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+.markdown-body p {
+  margin-bottom: 1em;
+}
+.markdown-body ul {
+  list-style-type: disc;
+  padding-left: 1.5em;
+  margin-bottom: 1em;
+}
